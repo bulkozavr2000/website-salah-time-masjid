@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.genspark.ai/api/page_private?id=nxqzgtqg -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Время молитв - Мечети Ташкента</title>
+    <link href="./index_files/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index_files/all.min.css">
+    <link href="./index_files/css2" rel="stylesheet">
+    <meta name="theme-color" content="#059669">
+    <link rel="manifest" href="data:application/manifest+json,{%0A        &#39;name&#39;: &#39;%D0%92%D1%80%D0%B5%D0%BC%D1%8F %D0%BC%D0%BE%D0%BB%D0%B8%D1%82%D0%B2 %D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82&#39;,%0A        &#39;short_name&#39;: &#39;%D0%9C%D0%BE%D0%BB%D0%B8%D1%82%D0%B2%D1%8B&#39;,%0A        &#39;description&#39;: &#39;%D0%90%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5 %D0%B2%D1%80%D0%B5%D0%BC%D1%8F %D0%BC%D0%BE%D0%BB%D0%B8%D1%82%D0%B2 %D0%B2 %D0%BC%D0%B5%D1%87%D0%B5%D1%82%D1%8F%D1%85 %D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%D0%B0&#39;,%0A        &#39;start_url&#39;: &#39;/&#39;,%0A        &#39;display&#39;: &#39;standalone&#39;,%0A        &#39;background_color&#39;: &#39;#ffffff&#39;,%0A%20%20%20%20%20%20%20%20&#39;theme_color&#39;:%20&#39;#059669&#39;,%0A%20%20%20%20%20%20%20%20&#39;icons&#39;:%20[%0A%20%20%20%20%20%20%20%20%20%20%20%20{%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&#39;src&#39;:%20&#39;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMiAyMmMtNC40IDAtOC0zLjYtOC04IDAtMS4xLjItMi4yLjUtMy4ybDEuOS0uOGMtLjIuNi0uNC4xMy0uNCAyIDAgMy4zIDIuNyA2IDYgNnM2LTIuNyA2LTZ2LTJjMC0zLjMtMi43LTYtNi02SDZWM2g2YzQuNCA4IDMuNiA4IDggMCAxLjEtLjIgMi4yLS41IDMuMmwtMS45LjhjLjItLjYuNC0xLjMuNC0ydjIiIGZpbGw9IiMwNTk2NjkiLz48L3N2Zz4=&#39;,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&#39;sizes&#39;:%20&#39;192x192&#39;,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20&#39;type&#39;:%20&#39;image/svg+xml&#39;%0A%20%20%20%20%20%20%20%20%20%20%20%20}%0A%20%20%20%20%20%20%20%20]%0A%20%20%20%20}">
+    <style>
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .prayer-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .prayer-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .mosque-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .mosque-card:hover {
+            border-color: #059669;
+            box-shadow: 0 4px 20px rgba(5, 150, 105, 0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+        
+        .search-input {
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+        
+        .language-toggle {
+            background: #f3f4f6;
+            border-radius: 50px;
+            padding: 4px;
+            display: flex;
+            position: relative;
+        }
+        
+        .language-option {
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .language-option.active {
+            background: #059669;
+            color: white;
+            box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+        }
+        
+        .current-prayer {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        
+        .prayer-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+        
+        .qr-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .install-banner {
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            display: none;
+            animation: slideDown 0.5s ease;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .prayer-card {
+                margin-bottom: 12px;
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<!--UIPATH_EXTENSION_ID: conkfbpnllelocpogdmbilgmnkabjfmf--><style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style></head>
+<body class="bg-gray-50">
+    <!-- PWA Install Banner -->
+    <div id="installBanner" class="install-banner text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <i class="fas fa-mobile-alt mr-3"></i>
+                <span id="installText">Установите приложение для быстрого доступа</span>
+            </div>
+            <div class="flex gap-3">
+                <button id="installBtn" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium">
+                    <span id="installBtnText">Установить</span>
+                </button>
+                <button id="dismissBtn" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-mosque text-3xl mr-4"></i>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold" id="mainTitle">Время молитв</h1>
+                        <p class="text-green-100 text-sm" id="subtitle">Мечети Ташкента</p>
+                    </div>
+                </div>
+                
+                <!-- Language Toggle -->
+                <div class="language-toggle">
+                    <div class="language-option active" data-lang="ru">Рус</div>
+                    <div class="language-option" data-lang="uz">O'zb</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="container mx-auto px-4 py-6">
+        <div class="max-w-lg mx-auto">
+            <div class="relative">
+                <input type="text" id="searchInput" placeholder="Поиск мечетей..." class="search-input w-full px-4 py-3 pl-12 rounded-xl border border-gray-200 focus:border-green-600 focus:outline-none">
+                <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+            
+            <!-- District Filter -->
+            <div class="mt-4">
+                <select id="districtFilter" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-600 focus:outline-none"><option value="">Все районы</option><option value="Чиланзар">Чиланзар</option><option value="Юнусабад">Юнусабад</option><option value="Мирзо-Улугбек">Мирзо-Улугбек</option><option value="Яшнабад">Яшнабад</option><option value="Мирабад">Мирабад</option><option value="Сергели">Сергели</option><option value="Алмазар">Алмазар</option><option value="Бектемир">Бектемир</option><option value="Шайхантахур">Шайхантахур</option><option value="Учтепа">Учтепа</option><option value="Яккасарай">Яккасарай</option></select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Time -->
+    <section class="container mx-auto px-4 mb-6">
+        <div class="text-center">
+            <div class="inline-block bg-white rounded-xl shadow-md px-6 py-4">
+                <p class="text-gray-600 text-sm" id="currentTimeLabel">Текущее время</p>
+                <p class="text-2xl font-bold text-gray-800" id="currentTime">12:45:14</p>
+                <p class="text-sm text-gray-500" id="currentDate">Четверг, 5 июня 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Times Grid -->
+    <section class="container mx-auto px-4 mb-8">
+        <h2 class="text-xl font-bold mb-4 text-gray-800" id="prayerTimesTitle">Время намаза</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4" id="prayerGrid">
+                <div class="prayer-card p-6 rounded-xl text-center">
+                    <div class="prayer-icon mx-auto mb-3 text-2xl">
+                        🌅
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Фаджр</h3>
+                    <p class="text-2xl font-bold text-green-600">05:30</p>
+                </div>
+            
+                <div class="prayer-card p-6 rounded-xl text-center">
+                    <div class="prayer-icon mx-auto mb-3 text-2xl">
+                        ☀️
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Зухр</h3>
+                    <p class="text-2xl font-bold text-green-600">12:15</p>
+                </div>
+            
+                <div class="prayer-card p-6 rounded-xl text-center">
+                    <div class="prayer-icon mx-auto mb-3 text-2xl">
+                        🌤️
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Аср</h3>
+                    <p class="text-2xl font-bold text-green-600">15:45</p>
+                </div>
+            
+                <div class="prayer-card p-6 rounded-xl text-center">
+                    <div class="prayer-icon mx-auto mb-3 text-2xl">
+                        🌅
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Магриб</h3>
+                    <p class="text-2xl font-bold text-green-600">18:20</p>
+                </div>
+            
+                <div class="prayer-card p-6 rounded-xl text-center">
+                    <div class="prayer-icon mx-auto mb-3 text-2xl">
+                        🌙
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Иша</h3>
+                    <p class="text-2xl font-bold text-green-600">19:50</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Mosques List -->
+    <section class="container mx-auto px-4 mb-8">
+        <h2 class="text-xl font-bold mb-6 text-gray-800" id="mosquesTitle">Мечети Ташкента</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="mosquesGrid">
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Масжиди Кабир</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ул. Бунёдкор, 10
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                Чиланзар
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">Фаджр:</span>
+                                <span class="font-semibold ml-2">05:30</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Зухр:</span>
+                                <span class="font-semibold ml-2">12:15</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Аср:</span>
+                                <span class="font-semibold ml-2">15:45</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Магриб:</span>
+                                <span class="font-semibold ml-2">18:20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="viewMosqueDetails(1)" class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                                Посмотреть расписание
+                            </button>
+                            <button onclick="showQR(1, &#39;Масжиди Кабир&#39;)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Мечеть Ходжи Ахрора</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ул. Юнусабад, 15
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                Юнусабад
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">Фаджр:</span>
+                                <span class="font-semibold ml-2">05:25</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Зухр:</span>
+                                <span class="font-semibold ml-2">12:20</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Аср:</span>
+                                <span class="font-semibold ml-2">15:45</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Магриб:</span>
+                                <span class="font-semibold ml-2">18:20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="viewMosqueDetails(2)" class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                                Посмотреть расписание
+                            </button>
+                            <button onclick="showQR(2, &#39;Мечеть Ходжи Ахрора&#39;)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Джами Мечеть</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ул. Мирзо-Улугбек, 8
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                Мирзо-Улугбек
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">Фаджр:</span>
+                                <span class="font-semibold ml-2">05:30</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Зухр:</span>
+                                <span class="font-semibold ml-2">12:15</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Аср:</span>
+                                <span class="font-semibold ml-2">15:40</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Магриб:</span>
+                                <span class="font-semibold ml-2">18:15</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="viewMosqueDetails(3)" class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                                Посмотреть расписание
+                            </button>
+                            <button onclick="showQR(3, &#39;Джами Мечеть&#39;)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Мечеть Минор</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ул. Яшнабад, 22
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                Яшнабад
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">Фаджр:</span>
+                                <span class="font-semibold ml-2">05:30</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Зухр:</span>
+                                <span class="font-semibold ml-2">12:15</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Аср:</span>
+                                <span class="font-semibold ml-2">15:45</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Магриб:</span>
+                                <span class="font-semibold ml-2">18:20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="viewMosqueDetails(4)" class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                                Посмотреть расписание
+                            </button>
+                            <button onclick="showQR(4, &#39;Мечеть Минор&#39;)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Центральная мечеть</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ул. Амира Тимура, 5
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                Мирабад
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">Фаджр:</span>
+                                <span class="font-semibold ml-2">05:35</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Зухр:</span>
+                                <span class="font-semibold ml-2">12:15</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Аср:</span>
+                                <span class="font-semibold ml-2">15:45</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Магриб:</span>
+                                <span class="font-semibold ml-2">18:20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="viewMosqueDetails(5)" class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                                Посмотреть расписание
+                            </button>
+                            <button onclick="showQR(5, &#39;Центральная мечеть&#39;)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">Мечеть Нур</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ул. Сергели, 18
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                Сергели
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">Фаджр:</span>
+                                <span class="font-semibold ml-2">05:30</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Зухр:</span>
+                                <span class="font-semibold ml-2">12:15</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Аср:</span>
+                                <span class="font-semibold ml-2">15:45</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">Магриб:</span>
+                                <span class="font-semibold ml-2">18:20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="viewMosqueDetails(6)" class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                                Посмотреть расписание
+                            </button>
+                            <button onclick="showQR(6, &#39;Мечеть Нур&#39;)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold mb-4" id="aboutTitle">О проекте</h3>
+                    <p class="text-gray-300 text-sm" id="aboutText">Актуальное время молитв в мечетях Ташкента. Удобный поиск, QR-коды для быстрого доступа.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4" id="contactTitle">Контакты</h3>
+                    <p class="text-gray-300 text-sm" id="contactText">Для добавления вашей мечети или обновления информации свяжитесь с нами.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4" id="supportTitle">Поддержка</h3>
+                    <p class="text-gray-300 text-sm" id="supportText">Техническая поддержка и предложения по улучшению сервиса.</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm" id="copyrightText">© 2024 Время молитв Ташкент. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- QR Code Modal -->
+    <div id="qrOverlay" class="qr-overlay">
+        <div class="bg-white rounded-xl p-8 max-w-sm mx-4">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4" id="qrTitle">QR-код мечети</h3>
+                <div id="qrcode" class="flex justify-center mb-4"></div>
+                <p class="text-gray-600 text-sm mb-4" id="qrDescription">Отсканируйте код для быстрого доступа к расписанию этой мечети</p>
+                <button onclick="closeQR()" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors" id="qrCloseBtn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./index_files/qrcode.min.js.Без названия"></script>
+    
+    <script>
+        // Translations
+        const translations = {
+            ru: {
+                mainTitle: "Время молитв",
+                subtitle: "Мечети Ташкента",
+                searchPlaceholder: "Поиск мечетей...",
+                allDistricts: "Все районы",
+                currentTimeLabel: "Текущее время",
+                prayerTimesTitle: "Время намаза",
+                mosquesTitle: "Мечети Ташкента",
+                aboutTitle: "О проекте",
+                aboutText: "Актуальное время молитв в мечетях Ташкента. Удобный поиск, QR-коды для быстрого доступа.",
+                contactTitle: "Контакты",
+                contactText: "Для добавления вашей мечети или обновления информации свяжитесь с нами.",
+                supportTitle: "Поддержка",
+                supportText: "Техническая поддержка и предложения по улучшению сервиса.",
+                copyrightText: "© 2024 Время молитв Ташкент. Все права защищены.",
+                qrTitle: "QR-код мечети",
+                qrDescription: "Отсканируйте код для быстрого доступа к расписанию этой мечети",
+                qrCloseBtn: "Закрыть",
+                installText: "Установите приложение для быстрого доступа",
+                installBtnText: "Установить",
+                viewSchedule: "Посмотреть расписание",
+                showQR: "Показать QR-код",
+                prayers: {
+                    fajr: "Фаджр",
+                    dhuhr: "Зухр", 
+                    asr: "Аср",
+                    maghrib: "Магриб",
+                    isha: "Иша"
+                },
+                days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+                months: ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+            },
+            uz: {
+                mainTitle: "Намоз вақтлари",
+                subtitle: "Тошкент масжидлари",
+                searchPlaceholder: "Масжидларни қидириш...",
+                allDistricts: "Барча туманлар",
+                currentTimeLabel: "Ҳозирги вақт",
+                prayerTimesTitle: "Намоз вақтлари",
+                mosquesTitle: "Тошкент масжидлари",
+                aboutTitle: "Лойиҳа ҳақида",
+                aboutText: "Тошкент масжидларида долзарб намоз вақтлари. Қулай қидирув, тез кириш учун QR-кодлар.",
+                contactTitle: "Алоқа",
+                contactText: "Масжидингизни қўшиш ёки маълумотларни янгилаш учун биз билан боғланинг.",
+                supportTitle: "Қўллаб-қувватлаш",
+                supportText: "Техник ёрдам ва хизматни яхшилаш бўйича таклифлар.",
+                copyrightText: "© 2024 Тошкент намоз вақтлари. Барча ҳуқуқлар ҳимояланган.",
+                qrTitle: "Масжид QR-коди",
+                qrDescription: "Ушбу масжид жадвалига тез кириш учун кодни сканерланг",
+                qrCloseBtn: "Ёпиш",
+                installText: "Тез кириш учун иловани ўрнатинг",
+                installBtnText: "Ўрнатиш",
+                viewSchedule: "Жадвални кўриш",
+                showQR: "QR-кодни кўрсатиш",
+                prayers: {
+                    fajr: "Фажр",
+                    dhuhr: "Пешин",
+                    asr: "Аср", 
+                    maghrib: "Шом",
+                    isha: "Хуфтон"
+                },
+                days: ["Якшанба", "Душанба", "Сешанба", "Чоршанба", "Пайшанба", "Жума", "Шанба"],
+                months: ["январ", "феврал", "март", "апрел", "май", "июн", "июл", "август", "сентябр", "октябр", "нoyabr", "декабр"]
+            }
+        };
+
+        // Current language - Default to Russian and ensure consistency
+        let currentLang = localStorage.getItem('language') || 'ru';
+        
+        // Sample data
+        const prayerTimes = {
+            fajr: "05:30",
+            dhuhr: "12:15", 
+            asr: "15:45",
+            maghrib: "18:20",
+            isha: "19:50"
+        };
+
+        const mosques = [
+            {
+                id: 1,
+                name: {ru: "Масжиди Кабир", uz: "Масжиди Кабир"},
+                district: "Чиланзар",
+                address: {ru: "ул. Бунёдкор, 10", uz: "Бунёдкор кўчаси, 10"},
+                prayers: prayerTimes
+            },
+            {
+                id: 2,
+                name: {ru: "Мечеть Ходжи Ахрора", uz: "Хожи Аҳрор масжиди"},
+                district: "Юнусабад", 
+                address: {ru: "ул. Юнусабад, 15", uz: "Юнусобод кўчаси, 15"},
+                prayers: {...prayerTimes, fajr: "05:25", dhuhr: "12:20"}
+            },
+            {
+                id: 3,
+                name: {ru: "Джами Мечеть", uz: "Жомеъ масжиди"},
+                district: "Мирзо-Улугбек",
+                address: {ru: "ул. Мирзо-Улугбек, 8", uz: "Мирзо Улуғбек кўчаси, 8"},
+                prayers: {...prayerTimes, asr: "15:40", maghrib: "18:15"}
+            },
+            {
+                id: 4,
+                name: {ru: "Мечеть Минор", uz: "Минор масжиди"},
+                district: "Яшнабад",
+                address: {ru: "ул. Яшнабад, 22", uz: "Яшнобод кўчаси, 22"},
+                prayers: prayerTimes
+            },
+            {
+                id: 5,
+                name: {ru: "Центральная мечеть", uz: "Марказий масжид"},
+                district: "Мирабад",
+                address: {ru: "ул. Амира Тимура, 5", uz: "Амир Темур кўчаси, 5"},
+                prayers: {...prayerTimes, fajr: "05:35", isha: "19:45"}
+            },
+            {
+                id: 6,
+                name: {ru: "Мечеть Нур", uz: "Нур масжиди"},
+                district: "Сергели",
+                address: {ru: "ул. Сергели, 18", uz: "Сергели кўчаси, 18"},
+                prayers: prayerTimes
+            }
+        ];
+
+        let filteredMosques = [...mosques];
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language state correctly
+            initializeLanguage();
+            updateContent();
+            updateTime();
+            renderPrayerTimes();
+            renderMosques();
+            
+            // Update time every second
+            setInterval(updateTime, 1000);
+            
+            // Setup search and filter
+            setupSearch();
+            
+            // Setup PWA
+            setupPWA();
+        });
+
+        function initializeLanguage() {
+            // Ensure language is set correctly from localStorage or default to 'ru'
+            currentLang = localStorage.getItem('language') || 'ru';
+            
+            // Update language toggle UI to match current language
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+                if (option.dataset.lang === currentLang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Setup language toggle click handlers
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    const lang = option.dataset.lang;
+                    if (lang !== currentLang) {
+                        switchLanguage(lang);
+                    }
+                });
+            });
+        }
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update toggle UI
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+                if (option.dataset.lang === lang) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Update all content
+            updateContent();
+            renderPrayerTimes();
+            renderMosques();
+        }
+
+        function t(key) {
+            const keys = key.split('.');
+            let value = translations[currentLang];
+            for (const k of keys) {
+                value = value?.[k];
+            }
+            return value || key;
+        }
+
+        function updateContent() {
+            // Update text content
+            const elements = {
+                'mainTitle': t('mainTitle'),
+                'subtitle': t('subtitle'),
+                'searchInput': t('searchPlaceholder'),
+                'currentTimeLabel': t('currentTimeLabel'),
+                'prayerTimesTitle': t('prayerTimesTitle'),
+                'mosquesTitle': t('mosquesTitle'),
+                'aboutTitle': t('aboutTitle'),
+                'aboutText': t('aboutText'),
+                'contactTitle': t('contactTitle'),
+                'contactText': t('contactText'),
+                'supportTitle': t('supportTitle'),
+                'supportText': t('supportText'),
+                'copyrightText': t('copyrightText'),
+                'qrTitle': t('qrTitle'),
+                'qrDescription': t('qrDescription'),
+                'qrCloseBtn': t('qrCloseBtn'),
+                'installText': t('installText'),
+                'installBtnText': t('installBtnText')
+            };
+
+            Object.entries(elements).forEach(([id, text]) => {
+                const element = document.getElementById(id);
+                if (element) {
+                    if (id === 'searchInput') {
+                        element.placeholder = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+
+            // Update district filter
+            const districtFilter = document.getElementById('districtFilter');
+            if (districtFilter) {
+                districtFilter.innerHTML = `<option value="">${t('allDistricts')}</option>` +
+                    ['Чиланзар', 'Юнусабад', 'Мирзо-Улугбек', 'Яшнабад', 'Мирабад', 'Сергели', 'Алмазар', 'Бектемир', 'Шайхантахур', 'Учтепа', 'Яккасарай']
+                    .map(district => `<option value="${district}">${district}</option>`).join('');
+            }
+        }
+
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ru-RU', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            const dateString = `${t('days')[now.getDay()]}, ${now.getDate()} ${t('months')[now.getMonth()]} ${now.getFullYear()}`;
+            
+            document.getElementById('currentTime').textContent = timeString;
+            document.getElementById('currentDate').textContent = dateString;
+        }
+
+        function renderPrayerTimes() {
+            const grid = document.getElementById('prayerGrid');
+            const prayers = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+            const icons = ['🌅', '☀️', '🌤️', '🌅', '🌙'];
+            
+            grid.innerHTML = prayers.map((prayer, index) => `
+                <div class="prayer-card p-6 rounded-xl text-center">
+                    <div class="prayer-icon mx-auto mb-3 text-2xl">
+                        ${icons[index]}
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">${t(`prayers.${prayer}`)}</h3>
+                    <p class="text-2xl font-bold text-green-600">${prayerTimes[prayer]}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderMosques() {
+            const grid = document.getElementById('mosquesGrid');
+            
+            grid.innerHTML = filteredMosques.map(mosque => `
+                <div class="mosque-card rounded-xl p-6 animate-fade-in">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">${mosque.name[currentLang]}</h3>
+                            <p class="text-gray-600 text-sm mb-1">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                ${mosque.address[currentLang]}
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                                <i class="fas fa-city mr-2"></i>
+                                ${mosque.district}
+                            </p>
+                        </div>
+                        <div class="text-green-600">
+                            <i class="fas fa-mosque text-2xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t pt-4">
+                        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+                            <div>
+                                <span class="text-gray-500">${t('prayers.fajr')}:</span>
+                                <span class="font-semibold ml-2">${mosque.prayers.fajr}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">${t('prayers.dhuhr')}:</span>
+                                <span class="font-semibold ml-2">${mosque.prayers.dhuhr}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">${t('prayers.asr')}:</span>
+                                <span class="font-semibold ml-2">${mosque.prayers.asr}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">${t('prayers.maghrib')}:</span>
+                                <span class="font-semibold ml-2">${mosque.prayers.maghrib}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button 
+                                onclick="viewMosqueDetails(${mosque.id})"
+                                class="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                                ${t('viewSchedule')}
+                            </button>
+                            <button 
+                                onclick="showQR(${mosque.id}, '${mosque.name[currentLang]}')"
+                                class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+                            >
+                                <i class="fas fa-qrcode"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const districtFilter = document.getElementById('districtFilter');
+
+            function filterMosques() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedDistrict = districtFilter.value;
+
+                filteredMosques = mosques.filter(mosque => {
+                    const matchesSearch = mosque.name[currentLang].toLowerCase().includes(searchTerm) ||
+                                        mosque.address[currentLang].toLowerCase().includes(searchTerm);
+                    const matchesDistrict = !selectedDistrict || mosque.district === selectedDistrict;
+                    
+                    return matchesSearch && matchesDistrict;
+                });
+
+                renderMosques();
+            }
+
+            searchInput.addEventListener('input', filterMosques);
+            districtFilter.addEventListener('change', filterMosques);
+        }
+
+        function viewMosqueDetails(mosqueId) {
+            const mosque = mosques.find(m => m.id === mosqueId);
+            if (mosque) {
+                // Here you would typically navigate to a detailed page
+                // For now, we'll just scroll to the prayer times
+                document.getElementById('prayerGrid').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function showQR(mosqueId, mosqueName) {
+            const url = `${window.location.origin}${window.location.pathname}?mosque=${mosqueId}`;
+            
+            // Clear previous QR code
+            document.getElementById('qrcode').innerHTML = '';
+            
+            // Generate new QR code
+            QRCode.toCanvas(document.getElementById('qrcode'), url, {
+                width: 200,
+                height: 200,
+                color: {
+                    dark: '#059669',
+                    light: '#FFFFFF'
+                }
+            });
+            
+            document.getElementById('qrTitle').textContent = mosqueName;
+            document.getElementById('qrOverlay').style.display = 'flex';
+        }
+
+        function closeQR() {
+            document.getElementById('qrOverlay').style.display = 'none';
+        }
+
+        // Close QR on overlay click
+        document.getElementById('qrOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeQR();
+            }
+        });
+
+        function setupPWA() {
+            let deferredPrompt;
+            const installBanner = document.getElementById('installBanner');
+            const installBtn = document.getElementById('installBtn');
+            const dismissBtn = document.getElementById('dismissBtn');
+
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                installBanner.style.display = 'block';
+            });
+
+            installBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    deferredPrompt = null;
+                    installBanner.style.display = 'none';
+                }
+            });
+
+            dismissBtn.addEventListener('click', () => {
+                installBanner.style.display = 'none';
+            });
+        }
+
+        // Check for mosque parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const mosqueId = urlParams.get('mosque');
+        if (mosqueId) {
+            setTimeout(() => {
+                const mosque = mosques.find(m => m.id === parseInt(mosqueId));
+                if (mosque) {
+                    // Scroll to the specific mosque
+                    const mosqueCard = document.querySelector(`[onclick*="${mosqueId}"]`);
+                    if (mosqueCard) {
+                        mosqueCard.scrollIntoView({ behavior: 'smooth' });
+                        mosqueCard.style.border = '2px solid #059669';
+                    }
+                }
+            }, 1000);
+        }
+    </script>
+<script defer="" src="./index_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;94ae0c2f9c4979a6&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.5.0&quot;,&quot;token&quot;:&quot;4edd5f8ec12a48cfa682ab8261b80a79&quot;}" crossorigin="anonymous"></script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDjP51Bhu9MpEdb5YowP4XPllpqfVMesyTnF%2Bl4BiOCHyRMfUT4y1ZG%2FCeN0bzBcXGRC9jkCDnoUl%2F0AJfP3lacozj%2BHOI4532YWXa0DETsPO%2BEtmKR%2FCXkIj%2BHjPK8xiVD2D%2B4xXsRuKa8k2GUNfwFi7qEcBYWsL%2FHOJP4SgiQRLXscrNqvoapMoaO8gLGSlapBklPZdpWYT4TjT6Ot4NBjNjeXisWBHJSCOFUP4LNbkzqGl7cELwVLfsYjrc5CobOCSHCZUn7L5fWkBH4OwXjFW1gTN8vjoxbug04j9f5vI%2FGvz%2F5jH4lbDvwdB%2FDztgbAz9vTofsTGEs2SBnvZGDFykP%2BVPjQ5FXbUJwYDKSf5RmqEvHEXOPqX%2BEsqpgRWoXmK0PBOoZu1lu90%2F92XAdKlCwHdnzkABupIpmNrsfwXtd0vORv0BXLJdJOmg85UxGlTUfPse51LxNamB%2BABU30jHFmsl6ILA%2BUQn2RvWMK3hP7VM1WSp8YZjsXiH0AFKA%3D%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDjP51Bhu9MpEdb5YowP4XPllpqfVMesyTnF+l4BiOCHyRMfUT4y1ZG/CeN0bzBcXGRC9jkCDnoUl/0AJfP3lacozj+HOI4532YWXa0DETsPO+EtmKR/CXkIj+HjPK8xiVD2D+4xXsRuKa8k2GUNfwFi7qEcBYWsL/HOJP4SgiQRLXscrNqvoapMoaO8gLGSlapBklPZdpWYT4TjT6Ot4NBjNjeXisWBHJSCOFUP4LNbkzqGl7cELwVLfsYjrc5CobOCSHCZUn7L5fWkBH4OwXjFW1gTN8vjoxbug04j9f5vI/Gvz/5jH4lbDvwdB/DztgbAz9vTofsTGEs2SBnvZGDFykP+VPjQ5FXbUJwYDKSf5RmqEvHEXOPqX+EsqpgRWoXmK0PBOoZu1lu90/92XAdKlCwHdnzkABupIpmNrsfwXtd0vORv0BXLJdJOmg85UxGlTUfPse51LxNamB+ABU30jHFmsl6ILA+UQn2RvWMK3hP7VM1WSp8YZjsXiH0AFKA==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./index_files/notice_dialog.js.Без названия"></script>
+    </body></html>
